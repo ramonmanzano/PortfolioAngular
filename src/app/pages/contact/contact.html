@@ -1,0 +1,37 @@
+<section class="card">
+  <h2>Contacto</h2>
+  <p class="muted">Puedes contactar conmigo a través del siguiente formulario.</p>
+
+  <form [formGroup]="form" (ngSubmit)="submit()" style="display:grid; gap:12px;">
+    <label>
+      Nombre
+      <input formControlName="name" />
+      <small class="muted"
+        *ngIf="form.get('name')?.touched && form.get('name')?.invalid">
+        Nombre obligatorio (min. 2 caracteres).
+      </small>
+    </label>
+
+    <label>
+      Email
+      <input formControlName="email" />
+      <small class="muted"
+        *ngIf="form.get('email')?.touched && form.get('email')?.invalid">
+        Email obligatorio y valido.
+      </small>
+    </label>
+
+    <label>
+      Mensaje
+      <textarea rows="5" formControlName="message"></textarea>
+      <small class="muted"
+        *ngIf="form.get('message')?.touched && form.get('message')?.invalid">
+        Mensaje obligatorio (min. 10 caracteres).
+      </small>
+    </label>
+
+    <button type="submit">Enviar</button>
+
+    <p *ngIf="sent">Mensaje enviado (simulado).</p>
+  </form>
+</section>

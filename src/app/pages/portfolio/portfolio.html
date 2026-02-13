@@ -1,0 +1,11 @@
+<section>
+  <h2>Portfolio</h2>
+  <p class="muted">Proyectos / trabajos</p>
+
+  <div class="grid">
+    <app-project-card *ngFor="let p of projects" [project]="p"></app-project-card>
+  </div>
+
+  <p class="muted" style="margin-top:14px;">
+  </p>
+</section>
