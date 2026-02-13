@@ -1,59 +1,110 @@
-# PortfolioAngular
+#+TITLE: Portfolio Profesional en Angular
+#+AUTHOR: Ramón Manzano
+#+LANGUAGE: es
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.5.
+* Descripción del proyecto
 
-## Development server
+Este proyecto consiste en el desarrollo de un *portfolio profesional como aplicación web de una sola página (SPA)* utilizando *Angular*, como evolución de un portfolio previo desarrollado con tecnologías frontend básicas.
 
-To start a local development server, run:
+El objetivo es aplicar de forma práctica los conceptos fundamentales vistos en clase: componentización, enrutamiento, servicios, formularios, almacenamiento web y buenas prácticas en TypeScript, manteniendo una estructura clara y escalable.
 
-```bash
-ng serve
-```
+* Tecnologías utilizadas
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- Angular
+- TypeScript
+- HTML5
+- SCSS (CSS propio, sin frameworks externos)
+- Angular Router
+- Angular Forms (Reactive Forms)
+- LocalStorage
+- Git y GitHub
 
-## Code scaffolding
+* Estructura del proyecto
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+El proyecto sigue una arquitectura modular basada en componentes:
 
-```bash
-ng generate component component-name
-```
+** Home
+- Presentación personal
+- Información profesional y académica
+- Diseño estructurado tipo currículum vitae
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+** Portfolio
+- Listado de proyectos realizados
+- Uso de componentes reutilizables para cada proyecto
+- Renderizado dinámico mediante *ngFor
 
-```bash
-ng generate --help
-```
+** Contacto
+- Formulario de contacto funcional
+- Implementado con Reactive Forms
+- Validaciones de campos obligatorios y formato de correo electrónico
 
-## Building
+Además, se incluyen componentes compartidos:
+- Navbar
+- Footer
+- Tarjeta de proyecto (Project Card)
 
-To build the project run:
+* Enrutamiento
 
-```bash
-ng build
-```
+La navegación entre las distintas secciones se realiza mediante *Angular Router*, configurando la aplicación como SPA.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Rutas principales:
+- /home
+- /portfolio
+- /contact
 
-## Running unit tests
+Se utiliza *router-outlet* para la carga dinámica de vistas y *routerLink* para la navegación entre componentes.
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+* Uso de almacenamiento web
 
-```bash
-ng test
-```
+Se implementa un servicio específico para la gestión de almacenamiento en el cliente utilizando *localStorage*.
 
-## Running end-to-end tests
+Este almacenamiento se emplea para guardar preferencias del usuario (por ejemplo, el tema visual), siguiendo buenas prácticas y evitando el uso de datos sensibles.
 
-For end-to-end (e2e) testing, run:
+* Uso de TypeScript y buenas prácticas
 
-```bash
-ng e2e
-```
+- Uso de tipado fuerte mediante interfaces y tipos.
+- Evita el uso del tipo *any*.
+- Separación de responsabilidades mediante servicios.
+- Manejo controlado de errores en el acceso a almacenamiento.
+- Código organizado, legible y mantenible.
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+* Diseño y experiencia de usuario
 
-## Additional Resources
+- Diseño responsive adaptable a dispositivos móviles y escritorio.
+- Estilos desarrollados con SCSS propio.
+- Uso de CSS Grid y Flexbox.
+- Interfaz limpia y orientada a un entorno profesional.
+- No se utiliza Bootstrap ni frameworks CSS externos.
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+* Pruebas unitarias
+
+El proyecto incluye pruebas unitarias básicas generadas con Angular CLI para componentes y servicios (*.spec.ts*), verificando la correcta creación y configuración de los mismos.
+
+La estructura queda preparada para la ampliación de pruebas más avanzadas.
+
+* Control de versiones
+
+El código fuente se encuentra versionado en GitHub mediante commits progresivos que reflejan el desarrollo del proyecto.
+
+Repositorio:
+https://github.com/ramonmanzano/PortfolioAngular
+
+* Ejecución del proyecto
+
+1. Instalar dependencias:
+   #+begin_src bash
+   npm install
+   #+end_src
+
+2. Ejecutar en entorno de desarrollo:
+   #+begin_src bash
+   ng serve
+   #+end_src
+
+3. Acceder desde el navegador:
+   http://localhost:4200
+
+* Autor
+
+Ramón Manzano  
+Desarrollo de Aplicaciones Web (DAW)
